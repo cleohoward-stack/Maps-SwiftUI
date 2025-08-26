@@ -43,6 +43,8 @@ struct ClusterBubbleView: View {
                 .fill(Color.white)
                 .frame(width: 12, height: 6)
                 .shadow(color: .black.opacity(0.1), radius: 1, x: 0, y: 1)
+            
+            PulsatingAvatar(color: .blue, emoji: "")
         }
     }
 }

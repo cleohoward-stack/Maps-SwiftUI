@@ -9,24 +9,31 @@
 import SwiftUI
 
 struct PulsatingAvatar: View {
+    var color: Color = .blue
+    var emoji: String = "👶"
+    var pulseSize: CGFloat = 44
+    var iconSize: CGFloat = 24
+    
     @State private var animate = false
-
+    
     var body: some View {
         ZStack {
+            // Pulsing ring
             Circle()
-                .stroke(Color.blue.opacity(0.6), lineWidth: 2)
-                .frame(width: 44, height: 44)
+                .stroke(color.opacity(0.6), lineWidth: 2)
+                .frame(width: pulseSize, height: pulseSize)
                 .scaleEffect(animate ? 1.6 : 1)
                 .opacity(animate ? 0 : 0.6)
                 .animation(
                     .easeOut(duration: 1.5).repeatForever(autoreverses: false),
                     value: animate
                 )
-
+            
+            // Core avatar
             Circle()
-                .fill(Color.blue)
-                .frame(width: 24, height: 24)
-                .overlay(Text("👶").font(.caption))
+                .fill(color)
+                .frame(width: iconSize, height: iconSize)
+                .overlay(Text(emoji).font(.caption))
         }
         .onAppear {
             animate = true
@@ -35,5 +42,7 @@ struct PulsatingAvatar: View {
 }
 
 #Preview {
-    PulsatingAvatar()
+    PulsatingAvatar() // default 👶 blue
+    PulsatingAvatar(color: .green, emoji: "")
+    PulsatingAvatar(color: .red, emoji: "❤️", pulseSize: 60, iconSize: 28)
 }
