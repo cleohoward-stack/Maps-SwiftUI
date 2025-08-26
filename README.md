@@ -5,7 +5,8 @@ A focused exploration app comparing SwiftUI-first MapKit clustering against a UI
 **Target:** iOS 17+ · Xcode 15+ · Swift 5.9+
 
 ---
-/var/folders/db/ds5kfr995ps4f1fd8k2g4_yr0000gn/T/TemporaryItems/NSIRD_screencaptureui_fTNRVK/Screenshot 2025-08-26 at 12.18.27 PM.png
+<img width="604" height="1158" alt="Screenshot 2025-08-26 at 12 19 39 PM" src="https://github.com/user-attachments/assets/627c3786-e55e-46f5-bfb0-9fcdcad5195e" />
+
 
 ## TL;DR
 
